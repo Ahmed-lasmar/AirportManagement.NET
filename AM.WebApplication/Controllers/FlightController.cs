@@ -12,9 +12,12 @@ namespace AM.WebApplication.Controllers
 			this.sf = sf;
 		}
 		// GET: FlightController
-		public ActionResult Index()
+		public ActionResult Index(DateTime? dateDepart)
 		{
-			return View(sf.GetAll());
+			if (dateDepart == null)
+				return View(sf.GetAll());
+			else
+				return View(sf.GetMany(f => f.FlightDate.Date.Equals(dateDepart)));
 		}
 
 		// GET: FlightController/Details/5

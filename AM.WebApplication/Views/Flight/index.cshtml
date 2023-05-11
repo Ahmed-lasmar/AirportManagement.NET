@@ -1,11 +1,18 @@
-﻿@model IEnumerable<AM.ApplicationCore.Domain.Flight>
+@model IEnumerable<AM.ApplicationCore.Domain.Flight>
 
 @{
     ViewData["Title"] = "index";
 }
 
 <h1>index</h1>
-
+<form asp-action="index">
+    <fieldset>
+        <legend> Recherche</legend>
+        Saisir une date de départ :
+        <input type="date" name="dateDepart" />
+        <input type="submit" value="Serach" />
+    </fieldset>
+</form>
 <p>
     <a asp-action="Create">Create New</a>
 </p>

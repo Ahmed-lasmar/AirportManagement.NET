@@ -1,4 +1,4 @@
-﻿
+
 using AM.ApplicationCore.Domain;
 using AM.ApplicationCore.Interfaces;
 using System;
